@@ -34,11 +34,12 @@
     </div>
 
     <div class="col-sm-4">
-        <asp:Label runat="server">Quantita da richiedere </asp:Label>
+        <asp:Label runat="server">Quantita da richiedere</asp:Label>
     </div>
     <div class="col-sm-8">
         <asp:Label runat="server">
-            <asp:TextBox ID="qta" runat="server"></asp:TextBox></asp:Label>
+            <asp:TextBox ID="qta" runat="server"></asp:TextBox>
+        </asp:Label>
     </div>
     <asp:Button runat="server" OnClick="Richiedi_Click" class="btn btn-primary" Text="RICHIEDI ORDINE" />
     <asp:Button runat="server" PostBackUrl="~/Ricerca.aspx" class="btn btn-default" Text="ANNULLA" />

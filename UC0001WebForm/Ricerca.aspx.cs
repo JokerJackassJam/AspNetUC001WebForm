@@ -14,7 +14,7 @@ namespace UC0001WebForm {
             Message = Request["Message"] ?? null;
         }
 
-        protected void Cerca_Click(object sender, EventArgs e) {
+        protected void CiccioPasticcio(object sender, EventArgs e) {
             if (!String.IsNullOrEmpty(Codice.Text)) {
                 Response.Redirect($"~/Detail.aspx?codice={Codice.Text}");
             } else if (!String.IsNullOrEmpty(Descrizione.Text)) {
@@ -26,14 +26,14 @@ namespace UC0001WebForm {
                     tdCodice.Controls.Add(new Label() { Text = p.Codice.ToString(),CssClass="col-xs-2" });
                     tr.Cells.Add(tdCodice);
                     TableCell tdDescrizione = new TableCell();
-                    tdCodice.Controls.Add(new Label() { Text = p.Descrizione ,CssClass="col-xs-6" });
+                    tdDescrizione.Controls.Add(new Label() { Text = p.Descrizione ,CssClass="col-xs-6" });
                     tr.Cells.Add(tdDescrizione);
                     TableCell tdGiacenza = new TableCell();
-                    tdCodice.Controls.Add(new Label() { Text = p.Giacenza.ToString(),CssClass="col-xs-2" });
+                    tdGiacenza.Controls.Add(new Label() { Text = p.Giacenza.ToString(),CssClass="col-xs-2" });
                     tr.Cells.Add(tdGiacenza);
                     TableCell tdButton = new TableCell();
-                    tdCodice.Controls.Add(new Button() { Text = "detail", PostBackUrl = $"Detail?codice={p.Codice}" ,CssClass="col-xs-2"});
-                    tr.Cells.Add(tdGiacenza);
+                    tdButton.Controls.Add(new Button() { Text = "detail", PostBackUrl = $"Detail?codice={p.Codice}" ,CssClass="col-xs-2"});
+                    tr.Cells.Add(tdButton);
                     Table1.Rows.Add(tr);
                 }
             }

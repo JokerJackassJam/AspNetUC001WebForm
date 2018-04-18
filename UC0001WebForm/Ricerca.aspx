@@ -13,14 +13,17 @@
         <%=Message %>
     </div>
     <div class="form-group">
-        <asp:Label runat="server">Codice</asp:Label>
-        <asp:TextBox class="form-control" placeholder="Codice" runat="server" ID="Codice"></asp:TextBox>
+        <asp:Label ID="lbl1" runat="server">Codice</asp:Label>
+        <asp:TextBox class="form-control" placeholder="Codice" 
+            runat="server" id="Codice"></asp:TextBox>
     </div>
     <div class="form-group">
         <asp:Label runat="server">Descrizione</asp:Label>
-        <asp:TextBox class="form-control" placeholder="descrizione anche parziale" runat="server" ID="Descrizione"></asp:TextBox>
+        <asp:TextBox class="form-control" 
+            placeholder="descrizione anche parziale" 
+            runat="server" ID="Descrizione"></asp:TextBox>
     </div>
-    <asp:Button runat="server" OnClick="Cerca_Click" class="btn btn-primary" Text="CERCA" />
+    <asp:Button runat="server" OnClick="CiccioPasticcio" class="btn btn-primary" Text="CERCA" />
 
     <div class="table" style="margin-top:25px">
         <asp:Table ID="Table1" runat="server" width="100%"
